@@ -6,72 +6,8 @@
     <title>Minesweeper Project</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="minesweeper.css"> <!-- Link to the board's CSS -->
     <script src="minesweeper.js"></script>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            text-align: center;
-        }
 
-        #board{
-            width: 404px;
-            height: 400px;
-            border: 10px solid darkgray;
-            background-color: whitesmoke;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        #board div{
-            width: 48px;
-            height: 48px;
-            border: 1px solid black;
-
-            font-size: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;    
-        }
-
-        .tile-clicked{
-            background: darkgrey;
-        }
-
-        .x1{
-            color:red ;
-        }
-        .x2{
-            color: aqua;
-        }
-        .x3{
-            color: yellowgreen;
-        }
-        .x4{
-            color: blueviolet;
-        }
-        .x5{
-            color: goldenrod;
-        }
-        .x6{
-            color: chocolate;
-        }
-        .x7{
-            color: cornflowerblue;
-        }
-        .x8{
-            color: hotpink;
-        }
-
-        #flag-button{
-            width: 70px;
-            height: 50px;
-            font-size: 30px;
-            background-color: gainsboro;
-        }
-    </style>
 </head>
 <body>
     
@@ -168,9 +104,13 @@
                 </div>
             </div>
 
-        <div id="game">
-            <div id="game-main">
-                <div class="game-bar">
+            <div id="game">
+                <div id="game-main">
+
+                    <!-- Minesweeper board structure -->
+                    <h1>Mines:<span id="mines-count">0</span></h1>
+
+                    <div class="game-bar">
                     <div class="game-option">
                         <button class="option-medium">Medium <i class="ti-angle-down"></i></button>
                     </div>
@@ -187,13 +127,13 @@
                     </div>
                 </div>
 
-                <!-- Minesweeper board structure -->
-                <h1>Mines:<span id="mines-count">0</span></h1>
                 <div id="board">
                     
                 </div>
                 <br>
-                <button id="flag-button">🚩</button>
+                <div id="flag">
+                    <button id="flag-button">🚩</button>
+                </div>
                 <!-- End of Minesweeper Board structure -->
             </div>
         </div>
