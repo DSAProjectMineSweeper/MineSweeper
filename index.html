@@ -12,6 +12,7 @@
 <body>
     
     <div id="main">
+        <!--Task bar-->
         <div id="header">
             <ul id="nav">
                 <li><a href="#">Home</a></li>
@@ -33,7 +34,7 @@
                 </h2>
             </div>
         </div>
-
+        <!--Intro game-->
         <div id="about-game">
             <div id="intro-left">
                 <img src="./assets/img/b55399178cd1b2efc27b429cf1f38ebe.jpg" alt="Img Flag Minesweeper">
@@ -54,6 +55,7 @@
                 </div>
             </div>
         </div>
+        <!--Intro members-->
         <div id="members">
             <h2 class="members-head">Members</h2>
                 
@@ -104,14 +106,25 @@
                 </div>
             </div>
 
+            <!--Game main-->
             <div id="game">
                 <div id="game-main">
 
                     <!-- Minesweeper board structure -->
                     <h1>Mines:<span id="mines-count">0</span></h1>
 
-                    <div class="game-bar">
-                    <div class="game-option">
+                <div class="game-bar">
+
+                    <!--Undo button-->
+                    <div class="undo">
+                        <button class="undo-btn"><i class="ti-back-left"></i></button>
+                    </div>
+
+                    <div class="icon-button">
+                        <button class="face-btn"><i class="ti-face-smile"></i></button>
+                    </div>
+
+                  <!-- <div class="game-option">
                         <button class="option-medium">Medium <i class="ti-angle-down"></i></button>
                     </div>
 
@@ -124,7 +137,7 @@
 
                     <div class="game-sound">
                         <img src="./assets/img/game icon/volume_up_white_24dp.png" alt="">
-                    </div>
+                    </div>-->
                 </div>
 
                 <div id="board">

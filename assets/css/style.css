@@ -299,7 +299,34 @@ html{
     
 }
 
-.game-option{
+.icon-button{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 15px 130px;
+    display: inline-block;
+}
+
+.face-btn{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    background-color: yellow;
+}
+.undo{
+    display: inline-block;
+    margin: 12px;
+}
+
+.undo-btn{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+/*.game-option{
     display: inline-block;
     position: absolute;
     left: 16px;
@@ -363,7 +390,7 @@ html{
     height: 30px;
     margin: 10px;
 
-}
+}*/
 
 
 #board{
