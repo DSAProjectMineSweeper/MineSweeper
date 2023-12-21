@@ -1,4 +1,11 @@
 const MINE = '💣';
+const FLAG = '🚩';
+const HAPPY = '😌';
+const SAD = '🤧';
+const DEAD = '🥵';
+const HAPPY_WIN = '🥳';
+var gElPlayer = document.querySelector('.player');
+
 var gBoard;
 
 var gGame ={
@@ -11,14 +18,46 @@ var gGame ={
 
 var gLevel = {
     size: 4,
-    mines: 2
+    mines: 2,
+    lives: 1
 };      //// later change according to user selected level 
+
+var gELives = document.querySelector('.lives');
+
+//////timer
+var gStartTime;
+var gTimeInterval;
 
 /// Initialize the game by building the game board
 /// rendering, and setting the initial values for game state
 function init(){
-    gBoard = buildBoard();
+    gElPlayer.innerText = HAPPY;
+    gBoard = buildBoard(gLevel.size);
     renderBoard(gBoard);
+    if(gLevel.size === 4) gELives.innerText = '💟'
+    else gELives.innerText = '💟💟'
+}
+
+function handleLevel(level){
+    switch(level){
+        case 'easy':
+            gLevel.size = 4;
+            gLevel.mines = 2;
+            gLevel.lives = 1;
+            break;
+        case 'medium':
+            gLevel.size = 8;
+            gLevel.mines = 12;
+            gLevel.lives = 3;
+            break;
+        case 'hard':
+            gLevel.size = 12;
+            gLevel.mines = 30;
+            gLevel.lives = 3;
+    }
+    gameOver();
+    restart();
+    init();
 }
 
 ///Create 4x4 board with cell objects
@@ -44,6 +83,7 @@ function setMinesNegsCount(){
         for(var j = 0; j < gBoard[0].length; j++){
             if (gBoard[i][j].isMine) continue;
             var minesCount = countMines(gBoard, i, j);
+            if (minesCount === 0) minesCount = ' '
             gBoard[i][j].minesAroundCount = minesCount;
         }
     }
@@ -73,43 +113,104 @@ function placeMines(num, iExclude, jExclude){
         mineCount++;
     }
 }
+//////// GAME ACTIONS //////////
 /// handling cell clicks, revealing numbers or mines
 function cellClicked(elCell, i, j){
     var cell = gBoard[i][j];
+    if(cell.isMarked) return;
 
     ///first click of the game
     if(!gGame.isOn && gGame.firstClick){
         placeMines(gLevel.mines, i, j);
         gGame.isOn = true;
         gGame.firstClick = false;
+        startClock();
         setMinesNegsCount();
         ///mine
     }else if(cell.isMine){
-        renderBombs();
-        gameOver();
-        return;
+        cell.isShown = true;
+        if(gLevel.lives > 1){
+            gLevel.lives--;
+            renderCell(i, j, MINE);
+            if(gLevel.lives === 2) gELives.innerText = '💟💟';
+            else if(gLevel.lives === 1) gELives.innerText = '💟';
+            else gELives.innerText = SAD;
+            return;
+        }else if(gLevel.lives === 1){
+            renderBombs();
+            gameOver('lost');
+            return;
+        }
     }
 
-    ///cell with mines around
+    ///rest - as long as game is on and cell is not mine
 
-    if(gGame.isOn && cell.minesAroundCount > 0) elCell.innerText = cell.minesAroundCount;
+    if (gGame.isOn){
+        /// cell with mines around
 
-    /// cell with no mines around show neightbors
-    else if(gGame.isOn) renderNegs(gBoard.isOn);
-    /// in any case besides mine
-    cell.isShown = true;
+        if(cell.minesAroundCount > 0) elCell.innerText = cell.minesAroundCount;
+
+        /// cell with no mines around
+        else{
+            renderNegs(gBoard, i ,j);
+        }
+
+        /// in any case:
+        elCell.style = 'background-color: red';
+        cell.isShown = true;
+        if(isWin()) gameOver('win');
+    }
 }
 
-function gameOver(){
+function handleFlag(i, j){
+    var cell = gBoard[i][j];
+
+    if(!gGame.isOn) return;
+    if(cell.isShown && !cell.isMine) return;
+
+    if(!cell.isMarked){
+        renderCell(i, j, FLAG);
+        cell.isMarked = true;
+        if(isWin()) gameOver('win');
+    }else{
+        if(cell.isMine) return;
+        renderCell(i, j, '');
+        cell.isMarked = false;
+    }
+}
+
+///////// game over, win, restart//////////
+
+function gameOver(status){
+    stopClock();
     gGame.isOn = false;
-    document.querySelector('.restart').classList.remove('hidden');
+    if(status === 'win') gElPlayer.innerText = HAPPY_WIN;
+    else{
+        gELives.innerText = '💔';
+        gElPlayer.innerText = DEAD;
+    }
+}
+
+function isWin(){
+    for(var i = 0; i < gBoard.length; i++){
+        for(var j = 0; j < gBoard[0].length; j++){
+            if(gBoard[i][j].isMine && !gBoard[i][j].isShown) false;
+            if(!gBoard[i][j].isMine && !gBoard[i][j].isShown) return false;
+        }
+    }
+    return true;
 }
 
 function restart(){
+
     gGame.isOn = false;
     gGame.firstClick = true;
     gGame.showCount = 0;
     gGame.markedCount = 0;
     gGame.secsPassed = 0;
+
+    document.querySelector('.timer').innerHTML = '00:00';
+    gStartTime = null;
+    gTimeElasped = null;
     init();
 }

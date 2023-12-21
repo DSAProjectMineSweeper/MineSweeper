@@ -1,6 +1,23 @@
 body{
     text-align: center;
-    background-color: rgb(182, 182, 204);
+    background-color: #FFD8CC;
+    font-family: 'Charkra Petch', sans-serif;
+}
+
+h1{
+    color: rgb(78, 78, 78);
+    font-size: 30px;
+    margin: 1% auto;
+}
+
+.options-info{
+    margin: 1% auto;
+}
+
+button{
+    font-family: 'Charkra Petch', sans-serif;
+    border-radius: 10%;
+    background-color: #ecc1c1;
 }
 
 .game-board table{
@@ -8,13 +25,14 @@ body{
 }
 
 .game-board table, td{
-    border: 2px solid gray;
     border-collapse: collapse;
 }
 
 .game-board table td{
-    height: 30px;
-    width: 30px;
+    border: 7px outset green;
+    height: 25px;
+    width: 25px;
+    background-color: #ecc1c1;
 }
 
 .hidden{
