@@ -2,155 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minesweeper Project</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
-    <script src="minesweeper.js"></script>
-
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+    <title>Project DSA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <div id="main">
-        <!--Task bar-->
-        <div id="header">
-            <ul id="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about-game">About game</a></li>
-                <li><a href="#members">Members</a></li>
-            </ul>
 
-            <div class="play">
-                <li><a href="#game">Play game</a></li>
-            </div>
-        </div>
-
-        <div id="slide">
-            <div class="text-content">
-                <h2 class="text-heading">MINESWEEPER
-                    <div class="text-decscription">
-                        The project of JKQA team
-                    </div>
-                </h2>
-            </div>
-        </div>
-        <!--Intro game-->
-        <div id="about-game">
-            <div id="intro-left">
-                <img src="./assets/img/b55399178cd1b2efc27b429cf1f38ebe.jpg" alt="Img Flag Minesweeper">
-            </div>
-
-            <div id="intro-right">
-                <div class="intro-head">
-                    <h1 class="intro-text-head">Minesweeper</h1>
-                    <p class="intro-head-decs">The project of JQKA team</p>
-                </div>
-
-                <p class="intro-desc">
-                    <b>Minesweeper</b> is a logic puzzle video game genre generally played on personal computers. The game features a grid of clickable tiles, with hidden "mines" (depicted as naval mines in the original game) scattered throughout the board. The objective is to clear the board without detonating any mines, with help from clues about the number of neighboring mines in each field. Variants of Minesweeper have been made that expand on the basic concepts, such as Minesweeper X, Crossmines, and Minehunt. Minesweeper has been incorporated as a minigame in other games, such as RuneScape and Minecraft's 2015 April Fools update.        
-                </p>
-
-                <div class="intro-play-btn">
-                    <a href="#game">Play Now</a>
-                </div>
-            </div>
-        </div>
-        <!--Intro members-->
-        <div id="members">
-            <h2 class="members-head">Members</h2>
-                
-                <div class="card">  
-                    <div class="box">
-                        <img src="./assets/img/members/Bao.jpg">
-                        <h3>Võ Hoài Bảo</h3>
-                        <h5>Leader</h5>
-                        <div class="icons">
-                            <a href="https://www.facebook.com/sako.hopeka"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-github"></i></a>
-                        </div>
-                    </div>
-    
-                    <div class="box">
-                        <img src="./assets/img/members/Phat.jpg">
-                        <h3>Thái Thành Phát</h3>
-                        <h5>Member</h5>
-                        <div class="icons">
-                            <a href="#"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-github"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="box">
-                        <img src="./assets/img/members/Duy.jpg">
-                        <h3>Nguyễn Đức Duy</h3>
-                        <h5>Member</h5>
-                        <div class="icons">
-                            <a href="https://www.facebook.com/ducduylugia"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-github"></i></a>
-                        </div>
-                    </div>
-    
-                    <div class="box">
-                        <img src="./assets/img/members/Dung.jpg">
-                        <h3>Phạm Trung Dũng</h3>
-                        <h5>Member</h5>
-                        <div class="icons">
-                            <a href="https://www.facebook.com/tudukhongkay"><i class="ti-facebook"></i></a>
-                            <a href="#"><i class="ti-instagram"></i></a>
-                            <a href="#"><i class="ti-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Game main-->
-            <div id="game">
-                <div id="game-main">
-
-                    <!-- Minesweeper board structure -->
-                    <h1>Mines:<span id="mines-count">0</span></h1>
-
-                <div class="game-bar">
-
-                    <!--Undo button-->
-                    <div class="undo">
-                        <button class="undo-btn"><i class="ti-back-left"></i></button>
-                    </div>
-
-                    <div class="icon-button">
-                        <button class="face-btn"><i class="ti-face-smile"></i></button>
-                    </div>
-
-                  <!-- <div class="game-option">
-                        <button class="option-medium">Medium <i class="ti-angle-down"></i></button>
-                    </div>
-
-                    <div class="game-flag_count">
-                        <img src="./assets/img/game icon/flag_icon.png" alt="Flag">
-                        <div class="number">39</div>
-                        <img src="./assets/img/game icon/clock_icon.png" alt="Clock">
-                        <div class="number">000</div>
-                    </div>
-
-                    <div class="game-sound">
-                        <img src="./assets/img/game icon/volume_up_white_24dp.png" alt="">
-                    </div>-->
-                </div>
-
-                <div id="board">
-                    
-                </div>
-                <br>
-                <div id="flag">
-                    <button id="flag-button">🚩</button>
-                </div>
-                <!-- End of Minesweeper Board structure -->
-            </div>
-        </div>
+<body onload="init()">
+    <h1>Welcome to my group</h1>
+    <div class="game-board">
+        <table></table>
     </div>
-
+    <script src ="js/util.js"></script>
+    <script src="js/game.js"></script>
 </body>
+
 </html>
