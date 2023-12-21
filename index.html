@@ -9,6 +9,17 @@
 
 <body onload="init()">
     <h1>Welcome to my group</h1>
+    <div class="options-info">
+        <span class="level-choice">
+            <button onclick="handleLevel('easy')">easy</button>
+            <button onclick="handleLevel('medium')">medium</button>
+            <button onclick="handleLevel('hard')">hard</button>
+        </span>
+        <span class="lives"></span>
+        <span class="timers">00:00</span>
+        <br>
+        <span class="player" onclick="restart()"></span>
+    </div>
     <div class="game-board">
         <table></table>
     </div>
@@ -17,7 +28,7 @@
         onclick ="restart()">restart</button>
     </div>
     <script src ="js/util.js"></script>
-    <script src="js/game.js"></script>
+    <script src="js/game.js"></script>                                                
 </body>
 
 </html>
