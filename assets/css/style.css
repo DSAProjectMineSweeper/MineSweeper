@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    background-color: rgb(182, 182, 204);
 }
 
 .game-board table{
@@ -14,4 +15,8 @@ body{
 .game-board table td{
     height: 30px;
     width: 30px;
+}
+
+.hidden{
+    display: none;
 }
