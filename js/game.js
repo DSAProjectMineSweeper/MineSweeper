@@ -24,10 +24,6 @@ var gLevel = {
 
 var gELives = document.querySelector('.lives');
 
-//////timer
-var gStartTime;
-var gTimeInterval;
-
 /// Initialize the game by building the game board
 /// rendering, and setting the initial values for game state
 function init(){
@@ -83,7 +79,7 @@ function setMinesNegsCount(){
         for(var j = 0; j < gBoard[0].length; j++){
             if (gBoard[i][j].isMine) continue;
             var minesCount = countMines(gBoard, i, j);
-            if (minesCount === 0) minesCount = ' '
+            if (minesCount === 0) minesCount = '';
             gBoard[i][j].minesAroundCount = minesCount;
         }
     }
@@ -173,7 +169,7 @@ function handleFlag(i, j){
         cell.isMarked = true;
         if(isWin()) gameOver('win');
     }else{
-        if(cell.isMine) return;
+        if(cell.isMine && cell.isShown) return;
         renderCell(i, j, '');
         cell.isMarked = false;
     }
