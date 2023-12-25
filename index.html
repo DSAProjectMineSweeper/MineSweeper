@@ -5,30 +5,37 @@
     <meta name="viewport" content=""width=device-width, initial-scale="1.0">
     <title>Project DSA</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="icon" href="favicon.ico" />
 </head>
 
-<body onload="init()">
-    <h1>Welcome to my group</h1>
-    <div class="options-info">
-        <span class="level-choice">
-            <button onclick="handleLevel('easy')">easy</button>
-            <button onclick="handleLevel('medium')">medium</button>
-            <button onclick="handleLevel('hard')">hard</button>
-        </span>
-        <span class="lives"></span>
-        <span class="timers">00:00</span>
+<body onload="init('easy')">
+    <h1>My Mine Sweeper</h1>
+    <div class="game-main">
+        <div class="options-info">
+            <span class="level-choice">
+                <button onclick="handleLevel('easy')">easy</button>
+                <button onclick="handleLevel('medium')">medium</button>
+                <button onclick="handleLevel('hard')">hard</button></span>
+            <br>
+            <span class="timer">00:00</span>
+            <br>
+            <span class="player" onclick="restart()"></span> <span class="lives"></span>
+        </div>
+        <div class="game-board">
+            <table></table>
+        </div>
+        <div class="best-time"></div>
+    </div>
+
+    <span class="guide-btn" onclick="guideToggle()">❌</span>
+    <div class="guide">
+        welcome! <br>
         <br>
-        <span class="player" onclick="restart()"></span>
+        The guide will be put at here.
     </div>
-    <div class="game-board">
-        <table></table>
-    </div>
-    <div class="game-result"></div>
-    <div><button class="restart hidden" 
-        onclick ="restart()">restart</button>
-    </div>
-    <script src ="js/util.js"></script>
-    <script src="js/game.js"></script>                                                
+    <script src="js/util.js"></script>
+    <script src="js/game.js"></script>
 </body>
 
 </html>
