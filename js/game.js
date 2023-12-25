@@ -27,10 +27,6 @@ var gLevel = {
 
 var gElLives = document.querySelector('.lives');
 
-//////timer
-var gStartTime;
-var gTimeInterval;
-
 if(!localStorage.besttimeeasy) localStorage.setItem("besttimeeasy", Infinity);
 if(!localStorage.besttimemedium) localStorage.setItem("besttimemedium", Infinity);
 if(!localStorage.besttimehard) localStorage.setItem("besttimehard", Infinity);
@@ -98,8 +94,6 @@ function buildBoard(){
     }
     return board;
 }
-
-/// randomly placing mines on the board
 function placeMines(num, iExclude, jExclude) {
     var mineCount = 0;
     while (mineCount < num) {
@@ -128,7 +122,6 @@ function countMines(mat, rowIdx, colIdx) {
     return count;
 }
 
-///setting the mines around each cell
 function setMinesNegsCount() {
     for (var i = 0; i < gBoard.length; i++) {
         for (var j = 0; j < gBoard[0].length; j++) {
@@ -201,8 +194,8 @@ function handleFlag(i, j){
         renderCell(i, j, FLAG);
         cell.isMarked = true;
         if(isWin()) gameOver('win');
-    }else{
-        if(cell.isMine) return;
+    }else {
+        if (cell.isMine && cell.isShown) return;
         renderCell(i, j, ' ');
         cell.isMarked = false;
     }
