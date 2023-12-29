@@ -14,17 +14,19 @@
     <div class="game-main">
         <div class="options-info">
             <span class="level-choice">
-                <button onclick="handleLevel('easy')">easy</button>
-                <button onclick="handleLevel('medium')">medium</button>
-                <button onclick="handleLevel('hard')">hard</button></span>
+                <button onclick="handleLevel('easy')">easy <br>💣2</button>
+                <button onclick="handleLevel('medium')">medium<br>💣12</button>
+                <button onclick="handleLevel('hard')">hard <br>💣30</button></span>
             <br>
-            <span class="timer">00:00</span>
-            <br>
-            <span class="player" onclick="restart()"></span> <span class="lives"></span>
-        </div>
+
+            <span class="sneak-peek" onclick="sneakPeekOn()">💡</span>
+            <span class="player" onclick="restart()"></span>
+            <span class="lives"></span>
+
         <div class="game-board">
             <table></table>
         </div>
+        <span class="timer">00:00</span>
         <div class="best-time"></div>
     </div>
 
@@ -36,6 +38,8 @@
     </div>
     <script src="js/util.js"></script>
     <script src="js/game.js"></script>
+    <script src="js/helpers.js"></script>
 </body>
+
 
 </html>

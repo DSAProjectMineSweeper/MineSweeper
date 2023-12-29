@@ -2,6 +2,7 @@ body{
     text-align: center;
     background-color: #FFD8CC;
     font-family: 'Charkra Petch', sans-serif;
+    color: #4e4e4e;
 }
 
 h1{
@@ -9,6 +10,8 @@ h1{
     font-size: 30px;
     margin: 1% auto;
 }
+
+/*main game area*/
 
 .game-main{
     margin: auto;
@@ -30,13 +33,9 @@ button:active{
     font-weight: bold;
 }
 
-.lives{
-    position: absolute;
-    margin-top: 0.5%;
-}
-
 .game-board table{
-    margin: auto
+    margin: auto;
+    background-color: #ecc1c1;
 }
 
 .game-board table, td{
@@ -44,19 +43,20 @@ button:active{
 }
 
 .game-board table td{
-    border: 7px outset green;
+    border: 7px outset #DEB8C1;
     height: 25px;
     width: 25px;
-    background-color: #ecc1c1;
 }
 
-.hidden{
-    display: none;
+.game-board table td:hover{
+    background-color: #c7a7a7;
 }
 
 span.player{
     font-size: x-large;
 }
+
+/* guide area*/
 
 .guide{
     text-align: left;
@@ -75,4 +75,18 @@ span.player{
     position: absolute;
     top: 20px;
     left: 10px;
+}
+
+/*universal*/
+
+.hidden{
+    display: none;
+}
+
+.pressed {
+    background-color: #e4d1d1;
+}
+
+.peeked {
+    background-color: #d49d9d;
 }
