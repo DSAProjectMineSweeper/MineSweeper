@@ -30,6 +30,8 @@ function renderBombs(){
     }
 }
 
+var gNrMoves = [];
+
 function renderNegs(mat, rowIdx, colIdx, degree){
     for(var i = rowIdx - 1; i <= rowIdx + 1; i++){
         if(i < 0 || i > mat.length - 1) continue;
@@ -38,6 +40,8 @@ function renderNegs(mat, rowIdx, colIdx, degree){
             
             var currNr = mat[i][j];
             if(currNr.isMarked || currNr.isShown) continue;
+            gNrMoves.push(currNr);
+
             renderCell(i, j, currNr.minesAroundCount);
             currNr.isShown = true;
 

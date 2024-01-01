@@ -39,3 +39,47 @@ function showSneakPeek(rowIdx, colIdx) {
     }
     gSneakPeekOn = false;
 }
+
+
+function showSafeCell() {
+    if (!gGame.isOn) return;
+    if (gLevel.safeClicks === 0) return;
+    gLevel.safeClicks--;
+    document.querySelector('.safe-click').innerText = (gLevel.safeClicks === 1) ? `🧐` : (gLevel.safeClicks === 2) ? '🧐🧐' : ''
+    var safeCells = [];
+
+    for (var i = 0; i < gBoard.length; i++) {
+        for (var j = 0; j < gBoard[0].length; j++) {
+            var currCell = gBoard[i][j];
+            if (currCell.isMine || currCell.isShown) continue;
+            safeCells.push({ i: i, j: j });
+        }
+    }
+    var rndIdx = safeCells[getRandomInt(0, safeCells.length)]
+    document.querySelector(`.cell${rndIdx.i}-${rndIdx.j}`).classList.add('safe');
+    setTimeout(removeClass, 2000, rndIdx.i, rndIdx.j, 'safe');
+}
+
+function undo() {
+    if (!gGame.isOn) return;
+    if (!gMoves.length) return;
+    var move = gMoves.pop();
+
+    if (Array.isArray(move)) {
+        for (var i = 0; i < move.length; i++) {
+            var currMove = move[i];
+            reverseMove(currMove);
+        }
+    }
+    else reverseMove(move);
+}
+
+function reverseMove(obj) {
+    obj.isShown = false;
+    if (obj.isMine) {
+        gLevel.lives++;
+        gElLives.innerText = (gElLives.innerText === '💟💟💔') ? '💟💟💟' : '💟💟💔';
+    }
+    document.querySelector(`.cell${obj.iPos}-${obj.jPos}`).classList.remove('pressed');
+    renderCell(obj.iPos, obj.jPos, ' ');
+}
