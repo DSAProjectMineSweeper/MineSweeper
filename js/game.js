@@ -18,9 +18,9 @@ var gGame = {
     shownCount: 0, markedCount: 0, secsPassed: 0
 }
 
-var gLevel = { size: 4, mines: 2, lives: 1, bestTime: +localStorage.besttimeeasy }; /// SET TO EASY BY DEFULT
+var gLevel = { size: 4, mines: 2, lives: 1, bestTime: +localStorage.besttimeeasy, safeClicks: 1 }; /// SET TO EASY BY DEFULT
 var gElLives = document.querySelector('.lives');
-
+var gMoves = [];
 //// note about everything related to localStorage: it works, but my code is probably a bit messy / repetitive
 //// as i haven't got to practice it's use yet
 
@@ -38,6 +38,7 @@ function init() {
 
     gElLives.innerText = (gLevel.size === 4) ? '💟' : '💟💟💟';
     document.querySelector('.sneak-peek').innerText = (gLevel.size === 4) ? '💡' : '💡💡💡';
+    document.querySelector('.safe-click').innerText = (gLevel.size === 4) ? `🧐` : (gLevel.size === 8) ? '🧐🧐' : '🧐🧐🧐'
 
     updateBestTime();
 }
@@ -49,6 +50,7 @@ function handleLevel(level) {
             gLevel.mines = 2;
             gLevel.lives = 1;
             gLevel.hints  = 1;
+            gLevel.safeClicks = 1;
             gLevel.bestTime = +localStorage.besttimeeasy;
             break;
         case 'medium':
@@ -56,6 +58,7 @@ function handleLevel(level) {
             gLevel.mines = 12;
             gLevel.lives = 3;
             gLevel.hints = 3;
+            gLevel.safeClicks = 2;
             gLevel.bestTime = +localStorage.besttimemedium;
             break;
         case 'hard':
@@ -63,6 +66,7 @@ function handleLevel(level) {
             gLevel.mines = 30;
             gLevel.lives = 3;
             gLevel.hints = 3;
+            gLevel.safeClicks = 3;
             gLevel.bestTime = +localStorage.besttimehard;
             break;
     }
@@ -80,7 +84,9 @@ function buildBoard() {
                 minesAroundCount: null,
                 isShown: false,
                 isMine: false,
-                isMarked: false
+                isMarked: false,
+                iPos: i,
+                jPos: j
             }
             board[i].push(cell);
         }
@@ -144,15 +150,19 @@ function cellClicked(elCell, i, j) {
         setMinesNegsCount();
         gElPlayer.innerText = HAPPY;
     }
+    /// sneak peek
     else if (gSneakPeekOn) {
         showSneakPeek(i, j);
         return;
     }
+    /// mine
     else if (cell.isMine) {
         bombSound.play();
         cell.isShown = true;
+        /// in case life left
         if (gLevel.lives > 1) {
             gLevel.lives--;
+            gMoves.push(cell);
             renderCell(i, j, MINE);
             ///render the updated lives
             if (gLevel.lives === 2) gElLives.innerText = '💟💟💔';
@@ -160,6 +170,7 @@ function cellClicked(elCell, i, j) {
             gElPlayer.innerText = SAD;
             return;
         }
+        /// in case no lives left
         else if (gLevel.lives === 1) {
             renderBombs();
             gameOver('lost');
@@ -169,10 +180,16 @@ function cellClicked(elCell, i, j) {
 
     /// rest- as long as game is on and cell is not mine
     if (gGame.isOn) {
-        ///// cell with mines around
-        if (cell.minesAroundCount > 0) elCell.innerText = cell.minesAroundCount;
-        
-        else renderNegs(gBoard, i, j);
+        if (cell.minesAroundCount > 0) {
+            elCell.innerText = cell.minesAroundCount;
+            gMoves.push(cell);
+        }
+        else {
+            renderNegs(gBoard, i, j)
+            gMoves.push(gNrMoves.slice());
+            gMoves[gMoves.length - 1].push(cell);
+            gNrMoves = [];
+        };
 
         /// in any case other than sneakpeek/mine:
         elCell.classList.add('pressed');
@@ -239,6 +256,9 @@ function restart() {
     gStartTime = null;
     gTimeElasped = null;
     gLevel.hints = (gLevel.size === 4) ? 1 : 3;
+    gLevel.safeClicks = (gLevel.size === 4) ? 1 : (gLevel.size === 8) ? 2 : 3;
+    gMoves = [];
+    gNrMoves = [];
     document.querySelector('.best-time').innerText = '';
     init();
 }
