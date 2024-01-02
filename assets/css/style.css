@@ -1,14 +1,276 @@
-body{
-    text-align: center;
-    background-color: #FFD8CC;
-    font-family: 'Charkra Petch', sans-serif;
-    color: #4e4e4e;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-h1{
-    color: rgb(78, 78, 78);
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+#header{
+    background: linear-gradient(45deg, #3977c9, #23af23);
+    height: 46px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li a{
+    line-height: 46px;
+    padding: 0 24px;
+    text-decoration: none;
+    display: block;
+}
+
+#nav > li > a{
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+
+#header .play{
+    float: right;
+    top: 0;
+    right: 0;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
+    text-decoration: none;
+    display: block;
+
+}
+
+#header .play li{
+    list-style-type: none;
+}
+
+#header .play li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: 600;
+}
+
+#header .play:hover{
+    color: #000;
+    background-color: #FF0000;
+    cursor: pointer;
+}
+
+/*slide*/
+#slide{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/background_img/snapedit_1697859924016.png') top center / cover no-repeat;
+}
+
+#slide .text-content{
+    position: absolute;
+    top: 0;
+    color: #fff;   
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 16px;
+    text-align: center; 
+}
+
+#slide .text-heading{
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 68px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 10px #000;
+    letter-spacing: 5px;
+}
+
+#slide .text-decscription{
+    height: 165px;
+    width: 700px;
+    margin: 15px 0;
     font-size: 30px;
-    margin: 1% auto;
+    font-weight: 500;
+    text-shadow: 0 0 10px #000;
+}
+
+/*About game*/
+
+#about-game{
+    max-width: 1200px;
+    height: 500px;
+    margin: 64px 72px;
+
+}
+
+#intro-left{
+    float: left;
+    width: 50%;
+}
+#intro-left img{
+    height: 500px;
+    width: 500px;
+    right: 0;
+
+}
+
+#intro-right{
+    float: right;
+    width: 50%;
+}
+
+#intro-right .intro-head{
+    margin: 16px 149px;
+    font-size: 1.875rem;
+}
+
+#intro-right .intro-text-head{
+    font-size: 40px;
+    color: #006600;
+    text-transform: uppercase;
+}
+
+#intro-right .intro-head-decs{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#intro-right .intro-desc{
+    margin: 32px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: justify;
+}
+
+#intro-right .intro-desc b{
+    color: #006600;
+    font-size: larger;
+}
+
+#intro-right .intro-play-btn{
+    padding: 0 238px;
+}
+
+#intro-right .intro-play-btn a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    background: white;
+    border: 1px solid #006600;
+    padding: 9px 25px;
+    line-height: 1.4;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 550;
+
+}
+
+#intro-right .intro-play-btn a:hover{
+    transform: scale(1.2);
+    border: 1px solid #006600;
+    background: #006600;
+    color: white;
+    transition: .4s;
+}
+
+/*Card*/
+#members{
+	position: relative;
+	width: 100%;
+	height: 615px;
+	background: linear-gradient(45deg, #093977, #006600);
+    padding: 64px 16px;
+}
+
+.members-head{
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+    text-transform: uppercase;
+}
+
+.card{
+	width: 100%;
+	max-width: 1350px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	margin-top: 4rem;
+}
+
+.card img{
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	margin-bottom: 15px;
+}
+
+.box{
+	padding: 16px;
+	background: #1b1229;
+	border-radius: 15px;
+	transition: all .38s ease;
+}
+.box h3{
+	font-size: 23px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 8px;
+}
+.box h5{
+	font-size: 15px;
+	font-weight: 600;
+	color: #b7b4bb;
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+}
+.icons i{
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	margin: 0 8px;
+	transition: all .38s ease;
+}
+.icons i:hover{
+	transform: scale(1.2);
+}
+.box:hover{
+	transform: translateY(-10px);
+	cursor: pointer;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 1%;
+    color: #006600;
+    margin-top: 4rem;
 }
 
 .audio-control {
@@ -19,14 +281,37 @@ h1{
 
 /*main game area*/
 
-.game-main{
-    margin: auto;
-    background-color: #ffd0c4;
-    display: inline-block;
+#game{
+    width: 100%;
+	height: 615px;
+    text-align: center;
+    background: white;
+    font-family: 'Chakra Petch', sans-serif;
+    color: #4e4e4e;
 }
 
-.options-info{
-    margin: 1% auto;
+.game-main{
+    margin: auto;
+    background-color: #006600;
+    display: inline-block;
+    border-radius: 10%;
+    padding: 30px 4%;
+}
+
+.player{
+    font-size: 30px;
+}
+
+.safe-click, .guide-btn, .sneak-peek, .audio-control{
+    font-size: 20px;
+}
+
+.level-btn{
+    font-size: 15px;
+    background-color: #ecc1c1;
+    border-radius: 10px;
+    height: 30px;
+    padding: 0 10px;
 }
 
 button{
@@ -45,7 +330,7 @@ button:hover, .safe-click:hover, .guide-btn:hover, .player:hover, .sneak-peek:ho
 
 .game-board table{
     margin: auto;
-    background-color: #ecc1c1;
+    background-color: #115cbe;
 }
 
 .game-board table, td{
@@ -53,24 +338,46 @@ button:hover, .safe-click:hover, .guide-btn:hover, .player:hover, .sneak-peek:ho
 }
 
 .game-board table td{
-    border: 7px outset #DEB8C1;
-    height: 25px;
-    width: 25px;
+    border: 3px outset #DEB8C1;
+    height: 30px;
+    width: 30px;
 }
 
 .game-board table td:hover{
     background-color: #c7a7a7;
 }
 
-span.player{
-    font-size: x-large;
+.timer {
+    display: inline-block;
+    margin-top: 2%;
+    color: black;
+    font-size: 20px;
+    text-shadow: 0px 0px 7px rgb(77, 238, 56), 0px 0px 7px #ffffff
+}
+
+.best-time {
+font-size: 15px;
+}
+
+.undo-btn {
+    display: inline-block;
+    position: relative;
+    left:0%;
+    margin-top: 10px;
+    background-color: #ecc1c1;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+    height: 30px;
+    border-radius: 10px;
+    padding: 0px 5px;
 }
 
 /* guide area*/
 
 .guide{
     text-align: left;
-    background-color: #ffd0c4;
+    background-color: #093977;
     width: 340px;
     position: absolute;
     left: 10px;
@@ -87,11 +394,11 @@ span.player{
     left: 10px;
 }
 
-/*universal*/
-
 .hidden{
     display: none;
 }
+
+/* cells changes during game */
 
 .pressed {
     background-color: #e4d1d1;
@@ -99,4 +406,8 @@ span.player{
 
 .peeked {
     background-color: #d49d9d;
+}
+
+.safe {
+    background-color: #fad9d9;
 }

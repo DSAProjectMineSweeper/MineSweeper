@@ -5,44 +5,145 @@
     <meta name="viewport" content=""width=device-width, initial-scale="1.0">
     <title>Project DSA</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/favicon.png"/>
-    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/img/game icon/favicon.png"/>
+    <link rel="icon" href="./assets/img/game icon/favicon.ico" />
 </head>
 
 <body onload="init('easy')">
-    <h1>🚩Mine Sweeper🚩</h1>
-    <div class="audio-control" onclick="handleAudio()"> 🔊 sound on </div>
-    <div class="game-main">
-        <div class="options-info">
-            <span class="level-choice">
-                <button onclick="handleLevel(4)">easy 💣2</button>
-                <button onclick="handleLevel(8)">medium 💣12</button>
-                <button onclick="handleLevel(12)">hard 💣30</button></span>
-            <br>
-            <span class="safe-click" onclick="showSafeCell()"></span>
-            <span class="sneak-peek" onclick="sneakPeekOn()">💡</span>
-            <span class="lives"></span>
-            <br>
-            <span class="player" onclick="restart()"></span>
+    <div id="main">
+        <!--Task bar-->
+        <div id="header">
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-game">About game</a></li>
+                <li><a href="#members">Members</a></li>
+            </ul>
+
+            <div class="play">
+                <li><a href="#game">Play game</a></li>
+            </div>
         </div>
-        <div class="game-board">
-            <table></table>
+
+        <div id="slide">
+            <div class="text-content">
+                <h2 class="text-heading">MINESWEEPER
+                    <div class="text-decscription">
+                        The project of JKQA team
+                    </div>
+                </h2>
+            </div>
         </div>
-        <div class="timer">00:00</div>
-        <div class="best-time"></div>
-        <button class="undo-btn" onclick="undo()"> undo ↺ </button>
+        <!--Intro game-->
+        <div id="about-game">
+            <div id="intro-left">
+                <img src="./assets/img/background_img/b55399178cd1b2efc27b429cf1f38ebe.jpg" alt="Img Flag Minesweeper">
+            </div>
+
+            <div id="intro-right">
+                <div class="intro-head">
+                    <h1 class="intro-text-head">Minesweeper</h1>
+                    <p class="intro-head-decs">The project of JQKA team</p>
+                </div>
+
+                <p class="intro-desc">
+                    <b>Minesweeper</b> is a logic puzzle video game genre generally played on personal computers. The game features a grid of clickable tiles, with hidden "mines" (depicted as naval mines in the original game) scattered throughout the board. The objective is to clear the board without detonating any mines, with help from clues about the number of neighboring mines in each field. Variants of Minesweeper have been made that expand on the basic concepts, such as Minesweeper X, Crossmines, and Minehunt. Minesweeper has been incorporated as a minigame in other games, such as RuneScape and Minecraft's 2015 April Fools update.        
+                </p>
+
+                <div class="intro-play-btn">
+                    <a href="#game">Play Now</a>
+                </div>
+            </div>
+        </div>
+        <!--Intro members-->
+        <div id="members">
+            <h2 class="members-head">Members</h2>
+                
+                <div class="card">  
+                    <div class="box">
+                        <img src="./assets/img/members/Bao.jpg">
+                        <h3>Võ Hoài Bảo</h3>
+                        <h5>Leader</h5>
+                        <div class="icons">
+                            <a href="https://www.facebook.com/sako.hopeka"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-github"></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="box">
+                        <img src="./assets/img/members/Phat.jpg">
+                        <h3>Thái Thành Phát</h3>
+                        <h5>Member</h5>
+                        <div class="icons">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-github"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="box">
+                        <img src="./assets/img/members/Duy.jpg">
+                        <h3>Nguyễn Đức Duy</h3>
+                        <h5>Member</h5>
+                        <div class="icons">
+                            <a href="https://www.facebook.com/ducduylugia"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-github"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="box">
+                        <img src="./assets/img/members/Dung.jpg">
+                        <h3>Phạm Trung Dũng</h3>
+                        <h5>Member</h5>
+                        <div class="icons">
+                            <a href="https://www.facebook.com/tudukhongkay"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
     </div>
 
-    <span class="guide-btn" onclick="guideToggle()">❔</span>
-    <div class="guide hidden">
-        welcome!
-        <br><br>
-        The guilde will be displayed here!
-        
+    <div id="game">
+        <h1>🚩Mine Sweeper🚩</h1>
+        <div class="audio-control" onclick="handleAudio()"> 🔊 sound on </div>
+        <div class="game-main">
+            <div class="options-info">
+                <span class="level-choice">
+                    <button class="level-btn" onclick="handleLevel(4)">easy 💣2</button>
+                    <button class="level-btn" onclick="handleLevel(8)">medium 💣12</button>
+                    <button class="level-btn" onclick="handleLevel(12)">hard 💣30</button></span>
+                <br>
+                <span class="safe-click" onclick="showSafeCell()"></span>
+                <span class="sneak-peek" onclick="sneakPeekOn()">💡</span>
+                <span class="lives"></span>
+                <br>
+                <span class="player" onclick="restart()"></span>
+            </div>
+            <div class="game-board">
+                <table></table>
+            </div>
+            <div class="timer">00:00</div>
+            <div class="best-time"></div>
+            <button class="undo-btn" onclick="undo()"> undo ↺ </button>
+        </div>
+    
+        <span class="guide-btn" onclick="guideToggle()">❔</span>
+        <div class="guide hidden">
+            welcome!
+            <br><br>
+            The guilde will be displayed here!
+        </div>
     </div>
 
-    <script src="js/util.js"></script>
-    <script src="js/game.js"></script>
+    <script src="./assets/js/game.js"></script>
+    <script src="./assets/js/util.js"></script>
+    <script src="./assets/js/helper.js"></script>
     <script src="js/helpers.js"></script>
 </body>
 
