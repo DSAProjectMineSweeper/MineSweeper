@@ -79,6 +79,7 @@ function reverseMove(obj) {
     if (obj.isMine) {
         gLevel.lives++;
         gElLives.innerText = (gElLives.innerText === '💟💟💔') ? '💟💟💟' : '💟💟💔';
+        document.querySelector('.player').innerText = HAPPY;
     }
     document.querySelector(`.cell${obj.iPos}-${obj.jPos}`).classList.remove('pressed');
     renderCell(obj.iPos, obj.jPos, ' ');

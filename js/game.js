@@ -43,17 +43,17 @@ function init() {
     updateBestTime();
 }
 
-function handleLevel(level) {
-    switch (level) {
-        case 'easy':
+function handleLevel(levelSize) {
+    switch (levelSize) {
+        case 4:
             gLevel.size = 4;
             gLevel.mines = 2;
             gLevel.lives = 1;
-            gLevel.hints  = 1;
+            gLevel.hints = 1;
             gLevel.safeClicks = 1;
             gLevel.bestTime = +localStorage.besttimeeasy;
             break;
-        case 'medium':
+        case 8:
             gLevel.size = 8;
             gLevel.mines = 12;
             gLevel.lives = 3;
@@ -61,7 +61,7 @@ function handleLevel(level) {
             gLevel.safeClicks = 2;
             gLevel.bestTime = +localStorage.besttimemedium;
             break;
-        case 'hard':
+        case 12:
             gLevel.size = 12;
             gLevel.mines = 30;
             gLevel.lives = 3;
@@ -256,6 +256,7 @@ function restart() {
     gStartTime = null;
     gTimeElasped = null;
     gLevel.hints = (gLevel.size === 4) ? 1 : 3;
+    gLevel.lives = (gLevel.size === 4) ? 1 : 3;
     gLevel.safeClicks = (gLevel.size === 4) ? 1 : (gLevel.size === 8) ? 2 : 3;
     gMoves = [];
     gNrMoves = [];
