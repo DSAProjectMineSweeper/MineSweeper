@@ -9,9 +9,9 @@ const HAPPY_WIN = '🥳';
 var gElLives = document.querySelector('.lives');
 var gElPlayer = document.querySelector('.player');
 
-var winSound = new Audio('audio/win.mp3');
-var loseSound = new Audio('audio/lose.wav');
-var bombSound = new Audio('audio/bomb.mp3');
+var winSound = new Audio('assets/audio/win.mp3');
+var loseSound = new Audio('assets/audio/lose.wav');
+var bombSound = new Audio('assets/audio/bomb.mp3');
 
 var gBoard;
 var gGame = { isOn: false, firstClick: true, shownCount: 0, markedCount: 0, secsPassed: 0, isSoundOn: true }
