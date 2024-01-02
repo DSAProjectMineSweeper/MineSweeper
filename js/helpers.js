@@ -1,4 +1,3 @@
-/// sneak peek
 var gSneakPeekOn = false;
 
 function sneakPeekOn() {
@@ -9,13 +8,13 @@ function sneakPeekOn() {
 
     var elLightBulbs = document.querySelector('.sneak-peek');
     if (gLevel.size === 4) {
-        elLightBulbs.innerText = '✨';
+        elLightBulbs.innerText = '✖️';
         return;
     }
 
-    if (gLevel.hints === 2) elLightBulbs.innerText = '💡💡✨'
-    else if (gLevel.hints === 1) elLightBulbs.innerText = '💡✨✨'
-    else elLightBulbs.innerText = '✨✨✨'
+    if (gLevel.hints === 2) elLightBulbs.innerText = '💡💡✖️'
+    else if (gLevel.hints === 1) elLightBulbs.innerText = '💡✖️✖️'
+    else elLightBulbs.innerText = '✖️✖️✖️'
 }
 
 function showSneakPeek(rowIdx, colIdx) {
@@ -64,7 +63,6 @@ function undo() {
     if (!gGame.isOn) return;
     if (!gMoves.length) return;
     var move = gMoves.pop();
-
     if (Array.isArray(move)) {
         for (var i = 0; i < move.length; i++) {
             var currMove = move[i];
@@ -72,6 +70,7 @@ function undo() {
         }
     }
     else reverseMove(move);
+
 }
 
 function reverseMove(obj) {
@@ -81,6 +80,6 @@ function reverseMove(obj) {
         gElLives.innerText = (gElLives.innerText === '💟💟💔') ? '💟💟💟' : '💟💟💔';
         document.querySelector('.player').innerText = HAPPY;
     }
-    document.querySelector(`.cell${obj.iPos}-${obj.jPos}`).classList.remove('pressed');
-    renderCell(obj.iPos, obj.jPos, ' ');
+    document.querySelector(`.cell${obj.pos.i}-${obj.pos.j}`).classList.remove('pressed');
+    renderCell(obj.pos.i, obj.pos.j, ' ');
 }
