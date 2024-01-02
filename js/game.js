@@ -10,6 +10,7 @@ var gElPlayer = document.querySelector('.player'); /// global as used several ti
 var winSound = new Audio('audio/win.wav');
 var loseSound = new Audio('audio/lose.wav');
 var bombSound = new Audio('audio/bomb.mp3');
+var gIsSoundOn = true;
 
 var gBoard;
 
@@ -157,7 +158,7 @@ function cellClicked(elCell, i, j) {
     }
     /// mine
     else if (cell.isMine) {
-        bombSound.play();
+        if (gIsSoundOn) bombSound.play();
         cell.isShown = true;
         /// in case life left
         if (gLevel.lives > 1) {
@@ -226,11 +227,11 @@ function gameOver(status) {
         gElPlayer.innerText = HAPPY_WIN;
         checkBestTime(gLevel.size);
         updateBestTime();
-        winSound.play();
+        if (gIsSoundOn) winSound.play();
     } else if (status === 'lost') {
         gElLives.innerText = (gLevel.size === 4) ? '💔' : '💔💔💔';
         gElPlayer.innerText = DEAD;
-        loseSound.play();
+        if (gIsSoundOn) loseSound.play();
     }
 }
 

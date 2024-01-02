@@ -1,3 +1,15 @@
+function handleAudio() {
+    var elAudioControl = document.querySelector('.audio-control');
+    if (gIsSoundOn) {
+        gIsSoundOn = false;
+        elAudioControl.innerText = '🔇 muted'
+    }
+    else {
+        gIsSoundOn = true;
+        elAudioControl.innerText = '🔊 sound on'
+    }
+}
+
 function renderBoard(board){
     var strHTML = '';
 

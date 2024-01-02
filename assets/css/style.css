@@ -11,6 +11,12 @@ h1{
     margin: 1% auto;
 }
 
+.audio-control {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
 /*main game area*/
 
 .game-main{
@@ -31,6 +37,10 @@ button{
 
 button:active{
     font-weight: bold;
+}
+
+button:hover, .safe-click:hover, .guide-btn:hover, .player:hover, .sneak-peek:hover, .audio-control:hover {
+    cursor: pointer;
 }
 
 .game-board table{
