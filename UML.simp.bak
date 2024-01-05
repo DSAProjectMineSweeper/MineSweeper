@@ -148,7 +148,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-class" id="p1f70cd41423e4f5397a4927c92447632_147784431" name="MineSweeper" order-index="1" uid="" auto-routed-paths="false" default-line-style="default" view-location="267,-412">
+      <diagram type="uml-class" id="p1f70cd41423e4f5397a4927c92447632_147784431" name="MineSweeper" order-index="1" uid="" auto-routed-paths="false" default-line-style="default" view-location="-183,-412">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
