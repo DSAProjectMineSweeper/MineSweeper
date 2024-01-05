@@ -85,9 +85,14 @@ html{
 /*slide*/
 #slide{
     position: relative;
+    width: 100%;
+}
+
+
+#slide .bg-img img {
     margin-top: 46px;
-    padding-top: 50%;
-    background: url('/assets/img/background_img/snapedit_1697859924016.png') top center / cover no-repeat;
+    width: 100%;
+    height: auto;
 }
 
 #slide .text-content{
@@ -96,7 +101,7 @@ html{
     color: #fff;   
     left: 50%;
     transform: translateX(-50%);
-    padding: 15px 16px;
+    padding: 46px 16px;
     text-align: center; 
 }
 
