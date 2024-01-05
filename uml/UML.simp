@@ -27,11 +27,11 @@
       </counter>
       <counter>
         <item-type type-id="property" type="Property" />
-        <value>48</value>
+        <value>50</value>
       </counter>
       <counter>
         <item-type type-id="relationship" type="Association" />
-        <value>9</value>
+        <value>10</value>
       </counter>
       <counter>
         <item-type type-id="frame" type="Frame" />
@@ -67,9 +67,10 @@
       </counter>
     </fields>
   </counters>
-  <print-settings horizontal-sub-pages="-1" vertical-sub-pages="-1" page-bounds="0,0,850,1100" margin-bounds="79,79,692,895" />
+  <print-settings page-bounds="0,0,850,1098" margin-bounds="100,100,650,839" />
   <alias-groups />
   <management uid="md-a973ca04c14c4613ba0a2b921c8ed9ad" name="" task-id-sequence="0">
+    <working-schedule uid="ws-fb4b35e2c44d446a960d6ce169e9eb38" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
     <persons>
       <person id="">
         <first-name />
@@ -79,6 +80,7 @@
         <phone-number />
         <description />
         <color>#00000000</color>
+        <working-schedule uid="ws-b91641d75d6549b9ab6c276759a6a915" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
       </person>
     </persons>
     <teams />
@@ -98,34 +100,34 @@
       <types>
         <type id="Class:77ff2b74327b438d9c00b59239466f00" name="SoundManager" class-ref="77ff2b74327b438d9c00b59239466f00" />
         <type id="number" name="number" />
-        <type id="Class:0e35324d493d47c0b59411b5336027a5" name="Game" class-ref="0e35324d493d47c0b59411b5336027a5" />
-        <type id="Class:2f608bbb1fbb4cb780e362b7c6ab7d1c" name="Features" class-ref="2f608bbb1fbb4cb780e362b7c6ab7d1c" />
-        <type id="Array" name="Array" />
-        <type id="DOMElement" name="DOMElement" />
-        <type id="Class:ebf227a4776d4028b373967adf887ecd" name="Timer" class-ref="ebf227a4776d4028b373967adf887ecd" />
-        <type id="Dnumber" name="Dnumber" />
         <type id="Class:be4a1e3f0ae2404ebbe7c484d7004539" name="Renderer" class-ref="be4a1e3f0ae2404ebbe7c484d7004539" />
+        <type id="Array" name="Array" />
+        <type id="Dnumber" name="Dnumber" />
+        <type id="Class:0e35324d493d47c0b59411b5336027a5" name="Game" class-ref="0e35324d493d47c0b59411b5336027a5" />
+        <type id="Class:ebf227a4776d4028b373967adf887ecd" name="Timer" class-ref="ebf227a4776d4028b373967adf887ecd" />
+        <type id="Class:2f608bbb1fbb4cb780e362b7c6ab7d1c" name="Features" class-ref="2f608bbb1fbb4cb780e362b7c6ab7d1c" />
+        <type id="DOMElement" name="DOMElement" />
       </types>
     </custom-types>
   </types>
   <items>
-    <item id="6d8a5eec1c27471faecbc0e4a3e16b30" cid="PROP042" type="property" name="soundManager" owner="083e0c4d84344d2eb19b76ba42866ea0" creator="" creation-date="01/05/2024 13:30:23" visibility="public">
-      <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
-    </item>
-    <item id="440ca9432d37485d8d352976fe00a728" cid="PROP044" type="property" name="renderer" owner="16713bcf25cf4490a86a3399d56be54b" creator="" creation-date="01/05/2024 13:31:22" visibility="public">
-      <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
-    </item>
-    <item id="5d8a242e966a4d33b0d3320200faa9d5" cid="PROP047" type="property" name="timer" owner="195eaee6417248e98950c6805a07f341" creator="" creation-date="01/05/2024 13:32:13" visibility="public">
-      <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
-    </item>
-    <item id="c6f37f94530e464382472df45869f0c6" cid="PROP045" type="property" name="game" owner="16713bcf25cf4490a86a3399d56be54b" creator="" creation-date="01/05/2024 13:31:22" visibility="public">
+    <item id="c6f37f94530e464382472df45869f0c6" cid="PROP045" type="property" name="renderer" owner="16713bcf25cf4490a86a3399d56be54b" creator="" creation-date="01/05/2024 13:31:22" visibility="public">
       <structural-feature type="Renderer" type-id="Class:be4a1e3f0ae2404ebbe7c484d7004539" />
     </item>
-    <item id="5e6dff49a9f0457db83421bbaa34f4dc" cid="PROP046" type="property" name="game" owner="195eaee6417248e98950c6805a07f341" creator="" creation-date="01/05/2024 13:32:13" visibility="public">
-      <structural-feature type="Timer" type-id="Class:ebf227a4776d4028b373967adf887ecd" />
+    <item id="440ca9432d37485d8d352976fe00a728" cid="PROP044" type="property" name="game" owner="16713bcf25cf4490a86a3399d56be54b" creator="" creation-date="01/05/2024 13:31:22" visibility="public">
+      <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
     </item>
-    <item id="1336b43ed7b74fc68f076ba3cc647e9c" cid="PROP043" type="property" name="game" owner="083e0c4d84344d2eb19b76ba42866ea0" creator="" creation-date="01/05/2024 13:30:23" visibility="public">
+    <item id="cb448b914aa64e4ca5e70ef3789a6ab8" cid="PROP048" type="property" name="game" owner="5ee3b34facf54dd6ba80866ce2046665" creation-date="01/05/2024 20:15:18" visibility="public">
+      <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
+    </item>
+    <item id="1336b43ed7b74fc68f076ba3cc647e9c" cid="PROP043" type="property" name="soundManager" owner="083e0c4d84344d2eb19b76ba42866ea0" creator="" creation-date="01/05/2024 13:30:23" visibility="public">
       <structural-feature type="SoundManager" type-id="Class:77ff2b74327b438d9c00b59239466f00" />
+    </item>
+    <item id="6d8a5eec1c27471faecbc0e4a3e16b30" cid="PROP042" type="property" name="game" owner="083e0c4d84344d2eb19b76ba42866ea0" creator="" creation-date="01/05/2024 13:30:23" visibility="public">
+      <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
+    </item>
+    <item id="2411280d067f40c18fbdbcf86e909302" cid="PROP049" type="property" name="timer" owner="5ee3b34facf54dd6ba80866ce2046665" creation-date="01/05/2024 20:15:18" visibility="public">
+      <structural-feature type="Timer" type-id="Class:ebf227a4776d4028b373967adf887ecd" />
     </item>
     <item id="4239a3aa826f472da9ac8766bca2f6c3" cid="PROP040" type="property" name="feature" owner="811c667aa4d04b18bf719690876f6742" creator="" creation-date="01/05/2024 13:26:17" visibility="public">
       <structural-feature type="Features" type-id="Class:2f608bbb1fbb4cb780e362b7c6ab7d1c" />
@@ -148,7 +150,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-class" id="p1f70cd41423e4f5397a4927c92447632_147784431" name="MineSweeper" order-index="1" uid="" auto-routed-paths="false" default-line-style="default" view-location="267,-412">
+      <diagram type="uml-class" id="p1f70cd41423e4f5397a4927c92447632_147784431" name="MineSweeper" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-16,-153">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -160,26 +162,25 @@
           </authors>
           <description />
           <creation-date>01/05/2024 06:31:39</creation-date>
-          <change-date>01/05/2024 13:42:26</change-date>
+          <change-date>01/05/2024 20:15:18</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
         <abstract-items>
-          <item id="52d155724a044224840567e31ed4dec2" cid="ELEM015" type="usage" creator="" creation-date="01/05/2024 13:27:21" from="0e35324d493d47c0b59411b5336027a5" to="d22e27a9896345e083925ed650fbe1e9" visibility="package">
-            <stereotypes>
-              <stereotype name="use" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="52d155724a044224840567e31ed4dec2_use_c" type="use" creation-date="01/05/2024 13:27:21" ref="" />
-            </stereotype-instances>
+          <item id="77ff2b74327b438d9c00b59239466f00" cid="C004" type="class" name="SoundManager" creator="" creation-date="01/05/2024 12:17:14" visibility="undefined">
+            <owned-items />
+            <attributes>
+              <attribute id="a35346ebe3e614857872e212a46e1c3e1959" cid="PROP012" name="winSound" creation-date="01/05/2024 12:17:35" property-ref="cba00cd4c4ad4563b256226ef1e24ef6" />
+              <attribute id="a26a55027d5ea4fafacac5682805f4deb718" cid="PROP013" name="loseSound" creation-date="01/05/2024 12:18:03" property-ref="1ba6bbcaa287407cafcd7a76ed95587b" />
+              <attribute id="af5c7a394e03c402c8fe9d5ec7fe150ab364" cid="PROP014" name="bombSound" creation-date="01/05/2024 12:18:08" property-ref="d21eb9cafe494f49adba0d9dedd8bda8" />
+            </attributes>
+            <operations>
+              <operation id="oacc5995c89984f2fa921ccca12accb29229" cid="OP024" name="playWinSound" creation-date="01/05/2024 12:18:15" type="" type-id="" visibility="public" />
+              <operation id="o56c2b15a4a584b45b1bf6233536593ec544" cid="OP025" name="playLoseSound" creation-date="01/05/2024 12:18:21" type="" type-id="" visibility="public" />
+              <operation id="o70851422253b4734902263ea4076d133942" cid="OP026" name="playBombSound" creation-date="01/05/2024 12:18:25" type="" type-id="" visibility="public" />
+            </operations>
           </item>
-          <item id="076f480e1fb3469fb5ed99a2122e7417" cid="PROP015" type="property" name="gMoves" owner="2f608bbb1fbb4cb780e362b7c6ab7d1c" creator="" creation-date="01/05/2024 12:22:06" visibility="private">
-            <structural-feature type="Array" type-id="Array" />
-          </item>
-          <item id="8b3b757bfd0b4cdd893efe2a3f6538fa" cid="PROP017" type="property" name="gSneakPeekOn" owner="2f608bbb1fbb4cb780e362b7c6ab7d1c" creator="" creation-date="01/05/2024 12:22:23" visibility="private">
-            <structural-feature type="Boolean" type-id="Uml.Boolean" />
-          </item>
-          <item id="d22e27a9896345e083925ed650fbe1e9" cid="C005" type="class" name="HelpMethods" creator="" creation-date="01/05/2024 12:18:45">
+          <item id="d22e27a9896345e083925ed650fbe1e9" cid="C005" type="class" name="HelpMethods" creator="" creation-date="01/05/2024 12:18:45" visibility="undefined">
             <operations>
               <operation id="o8fb4f4f4ae484c7d9a4e3fa6bfefd9c5340" cid="OP027" name="getRandomInt" creation-date="01/05/2024 12:19:00" type="" type-id="" visibility="public" static="true">
                 <parameters>
@@ -192,7 +193,83 @@
               </operation>
             </operations>
           </item>
-          <item id="2f608bbb1fbb4cb780e362b7c6ab7d1c" cid="C006" type="class" name="Features" creator="" creation-date="01/05/2024 12:21:15">
+          <item id="8819af1f60514c00804a34d347dd7bac" cid="PROP016" type="property" name="gNrMoves" owner="2f608bbb1fbb4cb780e362b7c6ab7d1c" creator="" creation-date="01/05/2024 12:22:14" visibility="private">
+            <structural-feature type="Array" type-id="Array" />
+          </item>
+          <item id="75dd1b88677c44d0a295eabf3c87cb80" cid="PROP001" type="property" name="gBoard" owner="0e35324d493d47c0b59411b5336027a5" creator="" creation-date="01/05/2024 06:31:53" visibility="private">
+            <structural-feature type="Array" type-id="Array" />
+          </item>
+          <item id="1ba6bbcaa287407cafcd7a76ed95587b" cid="PROP013" type="property" name="loseSound" owner="77ff2b74327b438d9c00b59239466f00" creator="" creation-date="01/05/2024 12:18:03" visibility="private" />
+          <item id="cfa1fa5696b0495fa678f09491796cb6" cid="ELEM016" type="usage" creator="" creation-date="01/05/2024 13:28:35" from="2f608bbb1fbb4cb780e362b7c6ab7d1c" to="d22e27a9896345e083925ed650fbe1e9" visibility="package">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="cfa1fa5696b0495fa678f09491796cb6_use_c" type="use" creation-date="01/05/2024 13:28:35" ref="" />
+            </stereotype-instances>
+          </item>
+          <item id="cba00cd4c4ad4563b256226ef1e24ef6" cid="PROP012" type="property" name="winSound" owner="77ff2b74327b438d9c00b59239466f00" creator="" creation-date="01/05/2024 12:17:35" visibility="private" />
+          <item id="16713bcf25cf4490a86a3399d56be54b" cid="REL007" type="relationship" creator="" creation-date="01/05/2024 13:31:22" from="0e35324d493d47c0b59411b5336027a5" to="be4a1e3f0ae2404ebbe7c484d7004539" visibility="package">
+            <owned-items />
+            <relation from="0e35324d493d47c0b59411b5336027a5" to="be4a1e3f0ae2404ebbe7c484d7004539" derived="false">
+              <start-role id="umlar-168fa3e9-7a9e-489c-bcf4-f8a66bad579f" name="" navigability="yes" association-type="association" visibility="public" property-ref="440ca9432d37485d8d352976fe00a728" />
+              <end-role id="umlar-74fe89a0-15b1-4c71-82c2-edc62ee48ea2" name="" navigability="yes" association-type="association" visibility="public" property-ref="c6f37f94530e464382472df45869f0c6" />
+            </relation>
+          </item>
+          <item id="74b97ba93b484c959fb86fe410a889b9" cid="PROP003" type="property" name="gGame" owner="0e35324d493d47c0b59411b5336027a5" creator="" creation-date="01/05/2024 12:03:40" visibility="private">
+            <structural-feature type="Object" type-id="Uml.Object" />
+          </item>
+          <item id="52d155724a044224840567e31ed4dec2" cid="ELEM015" type="usage" creator="" creation-date="01/05/2024 13:27:21" from="0e35324d493d47c0b59411b5336027a5" to="d22e27a9896345e083925ed650fbe1e9" visibility="package">
+            <stereotypes>
+              <stereotype name="use" />
+            </stereotypes>
+            <stereotype-instances>
+              <stereotype id="52d155724a044224840567e31ed4dec2_use_c" type="use" creation-date="01/05/2024 13:27:21" ref="" />
+            </stereotype-instances>
+          </item>
+          <item id="083e0c4d84344d2eb19b76ba42866ea0" cid="REL006" type="relationship" creator="" creation-date="01/05/2024 13:30:23" from="0e35324d493d47c0b59411b5336027a5" to="77ff2b74327b438d9c00b59239466f00" visibility="package">
+            <owned-items />
+            <relation from="0e35324d493d47c0b59411b5336027a5" to="77ff2b74327b438d9c00b59239466f00" derived="false">
+              <start-role id="umlar-033bc782-7256-46d8-8462-113c6933587e" name="" navigability="yes" association-type="association" visibility="public" property-ref="6d8a5eec1c27471faecbc0e4a3e16b30" />
+              <end-role id="umlar-f44c8f84-6afa-4764-ac6a-c0980e5942e1" name="" navigability="yes" association-type="association" visibility="public" property-ref="1336b43ed7b74fc68f076ba3cc647e9c" />
+            </relation>
+          </item>
+          <item id="be4a1e3f0ae2404ebbe7c484d7004539" cid="C002" type="class" name="Renderer" creator="" creation-date="01/05/2024 06:32:55" visibility="undefined">
+            <operations>
+              <operation id="o57b1fef3ea30433ab5278d296653572f59" cid="OP012" name="handleAudio" creation-date="01/05/2024 12:11:11" type="" type-id="" visibility="public" />
+              <operation id="o74bf32a14dd84325abfc49936ff5c335895" cid="OP013" name="renderBoard" creation-date="01/05/2024 12:11:16" type="" type-id="" visibility="public">
+                <parameters>
+                  <parameter id="pc1c5e60411104d49b84f9ee0fa922f8e" name="board" type="" type-id="" creation-date="01/05/2024 12:11:22" />
+                </parameters>
+              </operation>
+              <operation id="oed11c2dfd55e4eeba4328f098e6a746b960" cid="OP014" name="renderCell" creation-date="01/05/2024 12:11:25" type="" type-id="" visibility="public">
+                <parameters>
+                  <parameter id="pdf3c9be71e7d4a2d8c907457ca8f7d4e" name="i" type="" type-id="" creation-date="01/05/2024 12:11:35" />
+                  <parameter id="p8fbab831ce204dd293278a8def003f8e" name="j" type="" type-id="" creation-date="01/05/2024 12:11:35" />
+                  <parameter id="p9c1331bbd0da465db626340ed0c59e05" name="value" type="" type-id="" creation-date="01/05/2024 12:11:35" />
+                </parameters>
+              </operation>
+              <operation id="oa536ec659dc14a6fa3b6d452759b15dc566" cid="OP015" name="renderBombs" creation-date="01/05/2024 12:11:37" type="" type-id="" visibility="public" />
+              <operation id="o7b1773f9adf746a9af99e6e8bd12c939394" cid="OP019" name="renderNegs" creation-date="01/05/2024 12:12:48" type="" type-id="" visibility="public">
+                <parameters>
+                  <parameter id="p2d539a909150412bb2c0b431d8dbedbb" name="mat" type="" type-id="" creation-date="01/05/2024 12:13:02" />
+                  <parameter id="pd0f9b422a7824f9596f923dfe0cd0cfb" name="rowIdx" type="" type-id="" creation-date="01/05/2024 12:13:02" />
+                  <parameter id="p72a5b4a961554e8ba7a92a26d667584c" name="colIdx" type="" type-id="" creation-date="01/05/2024 12:13:02" />
+                </parameters>
+              </operation>
+            </operations>
+          </item>
+          <item id="076f480e1fb3469fb5ed99a2122e7417" cid="PROP015" type="property" name="gMoves" owner="2f608bbb1fbb4cb780e362b7c6ab7d1c" creator="" creation-date="01/05/2024 12:22:06" visibility="private">
+            <structural-feature type="Array" type-id="Array" />
+          </item>
+          <item id="5ee3b34facf54dd6ba80866ce2046665" cid="REL009" type="relationship" creation-date="01/05/2024 20:15:18" from="0e35324d493d47c0b59411b5336027a5" to="ebf227a4776d4028b373967adf887ecd" visibility="package">
+            <owned-items />
+            <relation from="0e35324d493d47c0b59411b5336027a5" to="ebf227a4776d4028b373967adf887ecd" derived="false">
+              <start-role id="umlar-420aa392-966f-461a-b425-4636548dd197" name="" navigability="yes" association-type="association" visibility="private" attribute-ref="a13980274c25a4231b59b3a04144ff929686" property-ref="cb448b914aa64e4ca5e70ef3789a6ab8" />
+              <end-role id="umlar-5341c426-d7d3-4aa9-b738-73816d7759b3" name="" navigability="yes" association-type="association" visibility="private" attribute-ref="a13980274c25a4231b59b3a04144ff929686" property-ref="2411280d067f40c18fbdbcf86e909302" />
+            </relation>
+          </item>
+          <item id="2f608bbb1fbb4cb780e362b7c6ab7d1c" cid="C006" type="class" name="Features" creator="" creation-date="01/05/2024 12:21:15" visibility="undefined">
             <owned-items />
             <attributes>
               <attribute id="ad874c780ef4a43e2895f4d767ff0fd32601" cid="PROP015" name="gMoves" creation-date="01/05/2024 12:22:06" property-ref="076f480e1fb3469fb5ed99a2122e7417" />
@@ -223,35 +300,7 @@
               </operation>
             </operations>
           </item>
-          <item id="8819af1f60514c00804a34d347dd7bac" cid="PROP016" type="property" name="gNrMoves" owner="2f608bbb1fbb4cb780e362b7c6ab7d1c" creator="" creation-date="01/05/2024 12:22:14" visibility="private">
-            <structural-feature type="Array" type-id="Array" />
-          </item>
-          <item id="be4a1e3f0ae2404ebbe7c484d7004539" cid="C002" type="class" name="Renderer" creator="" creation-date="01/05/2024 06:32:55">
-            <operations>
-              <operation id="o57b1fef3ea30433ab5278d296653572f59" cid="OP012" name="handleAudio" creation-date="01/05/2024 12:11:11" type="" type-id="" visibility="public" />
-              <operation id="o74bf32a14dd84325abfc49936ff5c335895" cid="OP013" name="renderBoard" creation-date="01/05/2024 12:11:16" type="" type-id="" visibility="public">
-                <parameters>
-                  <parameter id="pc1c5e60411104d49b84f9ee0fa922f8e" name="board" type="" type-id="" creation-date="01/05/2024 12:11:22" />
-                </parameters>
-              </operation>
-              <operation id="oed11c2dfd55e4eeba4328f098e6a746b960" cid="OP014" name="renderCell" creation-date="01/05/2024 12:11:25" type="" type-id="" visibility="public">
-                <parameters>
-                  <parameter id="pdf3c9be71e7d4a2d8c907457ca8f7d4e" name="i" type="" type-id="" creation-date="01/05/2024 12:11:35" />
-                  <parameter id="p8fbab831ce204dd293278a8def003f8e" name="j" type="" type-id="" creation-date="01/05/2024 12:11:35" />
-                  <parameter id="p9c1331bbd0da465db626340ed0c59e05" name="value" type="" type-id="" creation-date="01/05/2024 12:11:35" />
-                </parameters>
-              </operation>
-              <operation id="oa536ec659dc14a6fa3b6d452759b15dc566" cid="OP015" name="renderBombs" creation-date="01/05/2024 12:11:37" type="" type-id="" visibility="public" />
-              <operation id="o7b1773f9adf746a9af99e6e8bd12c939394" cid="OP019" name="renderNegs" creation-date="01/05/2024 12:12:48" type="" type-id="" visibility="public">
-                <parameters>
-                  <parameter id="p2d539a909150412bb2c0b431d8dbedbb" name="mat" type="" type-id="" creation-date="01/05/2024 12:13:02" />
-                  <parameter id="pd0f9b422a7824f9596f923dfe0cd0cfb" name="rowIdx" type="" type-id="" creation-date="01/05/2024 12:13:02" />
-                  <parameter id="p72a5b4a961554e8ba7a92a26d667584c" name="colIdx" type="" type-id="" creation-date="01/05/2024 12:13:02" />
-                </parameters>
-              </operation>
-            </operations>
-          </item>
-          <item id="ebf227a4776d4028b373967adf887ecd" cid="C003" type="class" name="Timer" creator="" creation-date="01/05/2024 12:13:54">
+          <item id="ebf227a4776d4028b373967adf887ecd" cid="C003" type="class" name="Timer" creator="" creation-date="01/05/2024 12:13:54" visibility="undefined">
             <owned-items />
             <attributes>
               <attribute id="a13980274c25a4231b59b3a04144ff929686" cid="PROP011" name="gTimeInterval" creation-date="01/05/2024 12:15:50" property-ref="ec3087715b0145449b86894843af7a74" />
@@ -267,10 +316,18 @@
               <operation id="o5a22c69fb7bc40f1b4ff4ca4d89c2ea0104" cid="OP023" name="renderBestTime" creation-date="01/05/2024 12:16:59" type="" type-id="" visibility="public" />
             </operations>
           </item>
-          <item id="ec3087715b0145449b86894843af7a74" cid="PROP011" type="property" name="gTimeInterval" owner="ebf227a4776d4028b373967adf887ecd" creator="" creation-date="01/05/2024 12:15:50" visibility="private">
-            <structural-feature type="number" type-id="number" />
+          <item id="811c667aa4d04b18bf719690876f6742" cid="REL005" type="relationship" creator="" creation-date="01/05/2024 13:26:17" from="2f608bbb1fbb4cb780e362b7c6ab7d1c" to="0e35324d493d47c0b59411b5336027a5" visibility="package">
+            <owned-items />
+            <relation from="2f608bbb1fbb4cb780e362b7c6ab7d1c" to="0e35324d493d47c0b59411b5336027a5" derived="false">
+              <start-role id="umlar-71df46e4-98ca-40d5-bf1f-6a1cfb741126" name="" navigability="yes" association-type="association" visibility="private" property-ref="4239a3aa826f472da9ac8766bca2f6c3" />
+              <end-role id="umlar-5afbeb9b-42b0-41ea-89ce-38e4d4d76188" name="" navigability="yes" association-type="association" visibility="private" property-ref="5a798e9c53b1497586aba74a60a23937" />
+            </relation>
           </item>
-          <item id="0e35324d493d47c0b59411b5336027a5" cid="C001" type="class" name="Game" creator="" creation-date="01/05/2024 06:31:45">
+          <item id="4d318701c49340e78615085d9af6a7ad" cid="PROP004" type="property" name="gLevel" owner="0e35324d493d47c0b59411b5336027a5" creator="" creation-date="01/05/2024 12:04:17" visibility="private">
+            <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
+          </item>
+          <item id="d21eb9cafe494f49adba0d9dedd8bda8" cid="PROP014" type="property" name="bombSound" owner="77ff2b74327b438d9c00b59239466f00" creator="" creation-date="01/05/2024 12:18:08" visibility="private" />
+          <item id="0e35324d493d47c0b59411b5336027a5" cid="C001" type="class" name="Game" creator="" creation-date="01/05/2024 06:31:45" visibility="undefined">
             <owned-items />
             <attributes>
               <attribute id="ac965b6aba3a249508871fc02f1df3579809" cid="PROP001" name="gBoard" creation-date="01/05/2024 06:31:53" property-ref="75dd1b88677c44d0a295eabf3c87cb80" />
@@ -317,67 +374,12 @@
               <operation id="ob6d5453ad4314746b70b629a28dfdf7a648" cid="OP011" name="restart" creation-date="01/05/2024 12:10:31" type="" type-id="" visibility="public" />
             </operations>
           </item>
-          <item id="75dd1b88677c44d0a295eabf3c87cb80" cid="PROP001" type="property" name="gBoard" owner="0e35324d493d47c0b59411b5336027a5" creator="" creation-date="01/05/2024 06:31:53" visibility="private">
-            <structural-feature type="Array" type-id="Array" />
+          <item id="8b3b757bfd0b4cdd893efe2a3f6538fa" cid="PROP017" type="property" name="gSneakPeekOn" owner="2f608bbb1fbb4cb780e362b7c6ab7d1c" creator="" creation-date="01/05/2024 12:22:23" visibility="private">
+            <structural-feature type="Boolean" type-id="Uml.Boolean" />
           </item>
-          <item id="16713bcf25cf4490a86a3399d56be54b" cid="REL007" type="relationship" creator="" creation-date="01/05/2024 13:31:22" from="0e35324d493d47c0b59411b5336027a5" to="be4a1e3f0ae2404ebbe7c484d7004539" visibility="package">
-            <owned-items />
-            <relation from="0e35324d493d47c0b59411b5336027a5" to="be4a1e3f0ae2404ebbe7c484d7004539" derived="false">
-              <start-role id="umlar-8c965f45-d1da-419e-b396-da1df77c79fa" name="" navigability="yes" association-type="association" visibility="public" property-ref="440ca9432d37485d8d352976fe00a728" />
-              <end-role id="umlar-83ccc53c-6d04-4640-8079-b2116f679ceb" name="" navigability="yes" association-type="association" visibility="public" property-ref="c6f37f94530e464382472df45869f0c6" />
-            </relation>
+          <item id="ec3087715b0145449b86894843af7a74" cid="PROP011" type="property" name="gTimeInterval" owner="ebf227a4776d4028b373967adf887ecd" creator="" creation-date="01/05/2024 12:15:50" visibility="private">
+            <structural-feature type="Timer" type-id="Class:ebf227a4776d4028b373967adf887ecd" />
           </item>
-          <item id="083e0c4d84344d2eb19b76ba42866ea0" cid="REL006" type="relationship" creator="" creation-date="01/05/2024 13:30:23" from="0e35324d493d47c0b59411b5336027a5" to="77ff2b74327b438d9c00b59239466f00" visibility="package">
-            <owned-items />
-            <relation from="0e35324d493d47c0b59411b5336027a5" to="77ff2b74327b438d9c00b59239466f00" derived="false">
-              <start-role id="umlar-bcd6c03f-d71a-4407-b40b-d6b48d36eeae" name="" navigability="yes" association-type="association" visibility="public" property-ref="6d8a5eec1c27471faecbc0e4a3e16b30" />
-              <end-role id="umlar-1565f88c-23ab-4e1c-a054-631e4e77ee83" name="" navigability="yes" association-type="association" visibility="public" property-ref="1336b43ed7b74fc68f076ba3cc647e9c" />
-            </relation>
-          </item>
-          <item id="811c667aa4d04b18bf719690876f6742" cid="REL005" type="relationship" creator="" creation-date="01/05/2024 13:26:17" from="2f608bbb1fbb4cb780e362b7c6ab7d1c" to="0e35324d493d47c0b59411b5336027a5" visibility="package">
-            <owned-items />
-            <relation from="2f608bbb1fbb4cb780e362b7c6ab7d1c" to="0e35324d493d47c0b59411b5336027a5" derived="false">
-              <start-role id="umlar-fe353b0b-73ae-43ac-bf4a-4e1d8a93671d" name="" navigability="yes" association-type="association" visibility="private" property-ref="4239a3aa826f472da9ac8766bca2f6c3" />
-              <end-role id="umlar-c64f2f60-a447-4d26-9135-7e68848cb58e" name="" navigability="yes" association-type="association" visibility="private" property-ref="5a798e9c53b1497586aba74a60a23937" />
-            </relation>
-          </item>
-          <item id="4d318701c49340e78615085d9af6a7ad" cid="PROP004" type="property" name="gLevel" owner="0e35324d493d47c0b59411b5336027a5" creator="" creation-date="01/05/2024 12:04:17" visibility="private">
-            <structural-feature type="Game" type-id="Class:0e35324d493d47c0b59411b5336027a5" />
-          </item>
-          <item id="195eaee6417248e98950c6805a07f341" cid="REL008" type="relationship" creator="" creation-date="01/05/2024 13:32:13" from="ebf227a4776d4028b373967adf887ecd" to="0e35324d493d47c0b59411b5336027a5" visibility="package">
-            <owned-items />
-            <relation from="ebf227a4776d4028b373967adf887ecd" to="0e35324d493d47c0b59411b5336027a5" derived="false">
-              <start-role id="umlar-e62eb3db-7281-42f5-95dc-b437d20acb50" name="" navigability="" association-type="association" visibility="public" property-ref="5e6dff49a9f0457db83421bbaa34f4dc" />
-              <end-role id="umlar-7039955f-a007-4bd4-a1e4-1bd34017ea26" name="" navigability="yes" association-type="association" visibility="public" property-ref="5d8a242e966a4d33b0d3320200faa9d5" />
-            </relation>
-          </item>
-          <item id="cfa1fa5696b0495fa678f09491796cb6" cid="ELEM016" type="usage" creator="" creation-date="01/05/2024 13:28:35" from="2f608bbb1fbb4cb780e362b7c6ab7d1c" to="d22e27a9896345e083925ed650fbe1e9" visibility="package">
-            <stereotypes>
-              <stereotype name="use" />
-            </stereotypes>
-            <stereotype-instances>
-              <stereotype id="cfa1fa5696b0495fa678f09491796cb6_use_c" type="use" creation-date="01/05/2024 13:28:35" ref="" />
-            </stereotype-instances>
-          </item>
-          <item id="77ff2b74327b438d9c00b59239466f00" cid="C004" type="class" name="SoundManager" creator="" creation-date="01/05/2024 12:17:14">
-            <owned-items />
-            <attributes>
-              <attribute id="a35346ebe3e614857872e212a46e1c3e1959" cid="PROP012" name="winSound" creation-date="01/05/2024 12:17:35" property-ref="cba00cd4c4ad4563b256226ef1e24ef6" />
-              <attribute id="a26a55027d5ea4fafacac5682805f4deb718" cid="PROP013" name="loseSound" creation-date="01/05/2024 12:18:03" property-ref="1ba6bbcaa287407cafcd7a76ed95587b" />
-              <attribute id="af5c7a394e03c402c8fe9d5ec7fe150ab364" cid="PROP014" name="bombSound" creation-date="01/05/2024 12:18:08" property-ref="d21eb9cafe494f49adba0d9dedd8bda8" />
-            </attributes>
-            <operations>
-              <operation id="oacc5995c89984f2fa921ccca12accb29229" cid="OP024" name="playWinSound" creation-date="01/05/2024 12:18:15" type="" type-id="" visibility="public" />
-              <operation id="o56c2b15a4a584b45b1bf6233536593ec544" cid="OP025" name="playLoseSound" creation-date="01/05/2024 12:18:21" type="" type-id="" visibility="public" />
-              <operation id="o70851422253b4734902263ea4076d133942" cid="OP026" name="playBombSound" creation-date="01/05/2024 12:18:25" type="" type-id="" visibility="public" />
-            </operations>
-          </item>
-          <item id="1ba6bbcaa287407cafcd7a76ed95587b" cid="PROP013" type="property" name="loseSound" owner="77ff2b74327b438d9c00b59239466f00" creator="" creation-date="01/05/2024 12:18:03" visibility="private" />
-          <item id="74b97ba93b484c959fb86fe410a889b9" cid="PROP003" type="property" name="gGame" owner="0e35324d493d47c0b59411b5336027a5" creator="" creation-date="01/05/2024 12:03:40" visibility="private">
-            <structural-feature type="Object" type-id="Uml.Object" />
-          </item>
-          <item id="cba00cd4c4ad4563b256226ef1e24ef6" cid="PROP012" type="property" name="winSound" owner="77ff2b74327b438d9c00b59239466f00" creator="" creation-date="01/05/2024 12:17:35" visibility="private" />
-          <item id="d21eb9cafe494f49adba0d9dedd8bda8" cid="PROP014" type="property" name="bombSound" owner="77ff2b74327b438d9c00b59239466f00" creator="" creation-date="01/05/2024 12:18:08" visibility="private" />
         </abstract-items>
         <layer id="dfbb0604ba2647d8b0d3d25fe60a6ee1" name="Default" visible="true" enabled="true" locked="false">
           <item id="0e35324d493d47c0b59411b5336027a5" iid="c7b3fd570da249a8a057c8c74ffe4c03" show-fields="true" creation-date="01/05/2024 06:31:45" order-index="0" type="entity">
@@ -448,7 +450,7 @@
             <relation from="2f608bbb1fbb4cb780e362b7c6ab7d1c" from-iid="6520e7b88d6f4a2e80d721b86cd586ae" to="d22e27a9896345e083925ed650fbe1e9" to-iid="ffbe83331ced447b80353bd793cb01ce" />
           </item>
           <item id="083e0c4d84344d2eb19b76ba42866ea0" iid="cedd052284244a12aea2538fbdbe67fc" creation-date="01/05/2024 13:30:23" order-index="9" type="relation">
-            <layout start-role-position="39.832664,38.10827" end-role-position="0.79808176,29.365309" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="345" y1="155" x2="168" y2="355" start-border-pos="0.9236111044883728" end-border-pos="0.3983870893716812" start-local-pos="88" end-local-pos="92" name-position="0,20">
+            <layout start-role-position="40.832672,32" end-role-position="60.788853,30.417767" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="345" y1="155" x2="168" y2="355" start-border-pos="0.9236111044883728" end-border-pos="0.3983870893716812" start-local-pos="88" end-local-pos="92" name-position="0,20">
               <points>
                 <point x="345" y="155" />
                 <point x="282" y="155" />
@@ -471,18 +473,16 @@
             </layout>
             <relation from="0e35324d493d47c0b59411b5336027a5" from-iid="c7b3fd570da249a8a057c8c74ffe4c03" to="be4a1e3f0ae2404ebbe7c484d7004539" to-iid="6b00a87a7f724898ad635a41a7f55b52" />
           </item>
-          <item id="195eaee6417248e98950c6805a07f341" iid="774dbad12b6243228070d782d1568ad9" creation-date="01/05/2024 13:32:13" order-index="11" type="relation">
-            <layout start-role-position="16.619333,25.137245" end-role-position="62.488194,-34.381252" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="971" y1="418" x2="644" y2="355" start-border-pos="1" end-border-pos="0.540028091520071" start-local-pos="0" end-local-pos="299" name-position="0,20">
+          <item id="5ee3b34facf54dd6ba80866ce2046665" iid="55316a89022940f78d7265737cb4ee82" creation-date="01/05/2024 20:15:18" order-index="11" type="relation">
+            <layout start-role-position="25,15" end-role-position="25.11821,-14.007029" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" start-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="701" y1="355" x2="971" y2="458" start-border-pos="0.5" end-border-pos="0.9255514705882353" start-local-pos="288" end-local-pos="40" name-position="0,20">
               <points>
-                <point x="971" y="418" />
-                <point x="855" y="442" />
-                <point x="806" y="450" />
-                <point x="809" y="450" />
-                <point x="808" y="450" />
-                <point x="644" y="355" />
+                <point x="701" y="355" />
+                <point x="849" y="426" />
+                <point x="887" y="448" />
+                <point x="971" y="458" />
               </points>
             </layout>
-            <relation from="ebf227a4776d4028b373967adf887ecd" from-iid="4996004393b145fab4790b8121dde42f" to="0e35324d493d47c0b59411b5336027a5" to-iid="c7b3fd570da249a8a057c8c74ffe4c03" />
+            <relation from="0e35324d493d47c0b59411b5336027a5" from-iid="c7b3fd570da249a8a057c8c74ffe4c03" from-field="a13980274c25a4231b59b3a04144ff929686" to="ebf227a4776d4028b373967adf887ecd" to-iid="4996004393b145fab4790b8121dde42f" to-field="a13980274c25a4231b59b3a04144ff929686" />
           </item>
         </layer>
       </diagram>
