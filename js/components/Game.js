@@ -16,7 +16,6 @@ class Game {
         bestTime: +localStorage.besttimeeasy,
         safeClicks: 1,
       };
-      this.gMoves = [];
     }
   
     init() {
@@ -199,8 +198,6 @@ class Game {
         this.gGame.markedCount = 0;
         this.gGame.secsPassed = 0;
         document.querySelector('.timer').innerHTML = '00:00';
-        timer.gStartTime = null;
-        timer.gTimeElasped = null;
         this.gLevel.hints = (this.gLevel.size === 4) ? 1 : 3;
         this.gLevel.lives = (this.gLevel.size === 4) ? 1 : 3;
         this.gLevel.safeClicks = (this.gLevel.size === 4) ? 1 : (this.gLevel.size === 8) ? 2 : 3;

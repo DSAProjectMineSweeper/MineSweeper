@@ -1,7 +1,5 @@
 class Timer {
     constructor() {
-        this.gStartTime = null;
-        this.gTimeElasped = null;
         this.gTimeInterval = null;
     }
 
