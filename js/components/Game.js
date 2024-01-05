@@ -32,7 +32,7 @@ class Game {
     }
   
     buildBoard() {
-        var board = [];
+        var board = []; //2D array
         for (var i = 0; i < this.gLevel.size; i++) {
             board.push([]);
             for (var j = 0; j < this.gLevel.size; j++) {
@@ -90,7 +90,7 @@ class Game {
   
     cellClicked(elCell, i, j) {
         var cell = this.gBoard[i][j];
-        if (cell.isMarked) return;
+        if (cell.isMarked || cell.isShown) return;
     
         ///first click of the game- places mines and sets game on
         if (!this.gGame.isOn && this.gGame.firstClick) {
